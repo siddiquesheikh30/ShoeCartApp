@@ -4,12 +4,14 @@ import {
   StatusBar,
   View,
   StyleSheet,
+  LogBox,
 } from 'react-native';
 import { NativeBaseProvider } from 'native-base'
 import NavContainer from './src/navigation/NavContainer';
 import { Provider } from 'react-redux';
 import { store } from './src/redux/store';
-// const screenDefaultOption = { headerShown: false };
+
+LogBox.ignoreAllLogs();
 
 export default function App() {
   return (
