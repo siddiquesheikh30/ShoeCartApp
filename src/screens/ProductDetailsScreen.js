@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+import React, { useEffect } from 'react';
 import { StyleSheet, View, Image, FlatList, useWindowDimensions, Text, ScrollView, Pressable } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { cartSlice } from '../redux/store/features/cart/cartSlice';
@@ -13,6 +14,10 @@ const ProductDetailsScreen = () => {
   const addToCart = () => {
     dispatch(cartSlice.actions.addCartItem({ product }));
   };
+
+  // useEffect(() => {
+  //   console.log(JSON.stringify(product, null, 2))
+  // }, [product]);
 
   return (
     <View style={styles.container}>

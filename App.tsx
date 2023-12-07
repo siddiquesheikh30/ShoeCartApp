@@ -5,6 +5,7 @@ import {
   View,
   StyleSheet,
 } from 'react-native';
+import { NativeBaseProvider } from 'native-base'
 import NavContainer from './src/navigation/NavContainer';
 import { Provider } from 'react-redux';
 import { store } from './src/redux/store';
@@ -13,12 +14,14 @@ import { store } from './src/redux/store';
 export default function App() {
   return (
     <Provider store={store}>
-      <View style={styles.container}>
-        <StatusBar
-          barStyle={'default'}
-        />
-        <NavContainer />
-      </View>
+      <NativeBaseProvider>
+        <View style={styles.container}>
+          <StatusBar
+            barStyle={'default'}
+          />
+          <NavContainer />
+        </View>
+      </NativeBaseProvider>
     </Provider>
   );
 }

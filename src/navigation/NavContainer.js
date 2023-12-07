@@ -7,6 +7,8 @@ import HomeScreen from '../screens/HomeScreen';
 import ProductDetailsScreen from '../screens/ProductDetailsScreen';
 import CartScreen from '../screens/CartScreen';
 import LoginScreen from '../screens/LoginScreen';
+import AddProductScreen from '../screens/AddProductScreen';
+
 const Stack = createNativeStackNavigator();
 
 function NavContainer() {
@@ -26,6 +28,11 @@ function NavContainer() {
                     name="Home"
                     component={HomeScreen}
                     options={{ headerShown: false }}
+                />
+
+                <Stack.Screen
+                    name="Add Product"
+                    component={AddProductScreen}
                 />
 
                 <Stack.Screen name="Cart" component={CartScreen} />

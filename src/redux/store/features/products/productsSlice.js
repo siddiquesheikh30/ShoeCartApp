@@ -15,5 +15,10 @@ export const productsSlice = createSlice({
                 (p) => p.id === action.payload
             );
         },
+        addNewProduct: (state, action) => {
+            console.log("action>>>", action.payload);
+            const newProduct = action.payload.product;
+            state.products.push({ product: newProduct });
+        }
     },
 });
